@@ -1,5 +1,5 @@
 // src/components/home/Skills.jsx
-import "./skills.css";
+import "./Skills.css";
 import SkillRating from "../SkillRating";
 import { skills, STAR_COLORS } from "../../datas/skillsData";
 
