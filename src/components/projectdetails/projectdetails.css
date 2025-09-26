@@ -1,0 +1,89 @@
+/* Slideshows */
+.slide_title {
+  margin-top: 3vw;
+  padding-bottom: .5vw;
+  
+  font-family: Jomhuria;
+  font-size: 3vw;
+  color: var(--main-pink);
+  text-align: center;
+  font-weight: normal;
+  line-height: 0.75;
+  letter-spacing: 0.1vw;
+}
+
+.slides-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10vw;
+  padding: 2vw;
+}
+
+/* Single Slide */
+.single-slide {
+  width: clamp(350px, 35vw, 500px);  /* smaller max + base */
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Iframe */
+.slide-iframe {
+  width: 125%;
+  aspect-ratio: 10 / 8;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 1vw;
+}
+@media (max-width: 400px) {
+  .single-slide {
+    min-width: 80vw;
+  }
+}
+
+/* Art Gallery */
+.gallery_title {
+  margin-bottom: 1vw;
+  font-family: Jomhuria;
+  font-size: 4vw;
+  color: var(--main-pink);
+  text-align: center;
+  font-weight: normal;
+  line-height: 0.75;
+  letter-spacing: 0.15vw;
+}
+
+.art-gallery {
+  margin-top: 2vw;
+  padding: 2vw;
+}
+
+.gallery-grid {
+  margin: 0 20vw;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(15vw, 1fr));
+  gap: 2vw;
+}
+
+.gallery-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.gallery-img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 1vw;
+}
+
+.gallery-caption {
+  margin-top: 1vw;
+  font-size: .9vw;
+  font-family: "Afacad", sans-serif;
+  font-weight: bold;
+  line-height: 0.75;
+  text-align: center;
+  color: var(--project-des-color);
+}

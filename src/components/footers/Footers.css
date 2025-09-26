@@ -1,0 +1,22 @@
+.footer {
+    padding: 2vw;
+    margin: 0;
+}
+
+.baseicons {
+    width: 20vw;
+    display: flex;
+    justify-self: flex-end;
+    justify-content: space-between;
+}
+
+img {
+    padding: 0;
+    margin: 0;
+}
+
+.icons {
+    width: 5vw;
+    display: flex;
+    align-self: center;
+}

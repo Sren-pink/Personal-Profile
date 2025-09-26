@@ -1,0 +1,83 @@
+.aboutme .topside {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.aboutme .title {
+  margin: 0;
+  font-family: Rubik, sans-serif;
+  font-size: 2.5vw;
+  line-height: 1.6;
+  color: var(--main-pink);
+  text-align: left;
+}
+
+.aboutme .description {
+  padding-top: .5vw;
+  margin: 0;
+  font-family: "Nunito", sans-serif;
+  font-size: 1.5vw;
+  font-weight: 700;
+  line-height: 1.6;
+  color: var(--default-pink);
+  text-align: left;
+}
+
+.leftside {
+  margin: 20px;
+  border-radius: 10px;
+  display: flex;
+}
+
+.rightside {
+  margin: 20px;
+  border-radius: 10px;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  justify-items: start;
+}
+
+.rightside .rtop {
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.rightside .rbot {
+  margin-top: 2vw;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.botside {
+  display: grid;
+  grid-template-columns: 50vw 1fr;
+}
+
+.education {
+  padding-top: .5vw;
+  font-family: "Nunito", sans-serif;
+  font-size: 1.5vw;
+  color: var(--default-pink);
+  font-weight: 700;
+}
+
+.education-row {
+  display: flex;
+  align-items: baseline;
+  gap: 10vw;               /* EXACT 10vw space between school and years */
+}
+.education .years {
+  color: var(--default-pink);
+  white-space: nowrap;
+}
+
+.degree {
+  margin: 4px 0 0 0;
+  font-size: 1.5vw;
+  line-height: 1.5;
+  color: var(--default-pink);
+}

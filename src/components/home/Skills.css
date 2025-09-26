@@ -1,0 +1,131 @@
+/* ===============================
+   Skills — Base
+   =============================== */
+
+/* Container */
+.skills-section {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 24px 16px;
+  font-family: Rubik, sans-serif;
+}
+
+.skills-section h2 {
+  font-family: Rubik, sans-serif;
+  font-weight: 800;
+  font-size: clamp(20px, 2.75vw, 36px);
+  line-height: 1.2;
+  margin: 0 0 16px 0;
+  color: var(--main-blue);
+}
+
+/* ===============================
+   Cards
+   =============================== */
+
+.skill-card {
+  display: grid;
+  grid-template-rows: auto auto;   /* name on top, stars below */
+  gap: 8px;
+  padding: 12px 8px;
+  border-radius: 12px;
+  width: 100%;                     /* fill the grid column */
+  max-width: 170px;                /* keeps a consistent visual size */
+}
+
+.skill-name {
+  font-family: "Nunito", sans-serif;
+  font-weight: 800;
+  font-size: clamp(14px, 1.4vw, 20px);
+  line-height: 1.1;
+  text-align: center;              /* grid variant default */
+  color: var(--main-blue);
+}
+
+.skill-stars {
+  display: flex;
+  gap: 6px;
+  justify-content: center;         /* grid variant default */
+  align-items: center;
+}
+
+.star { display: block; }
+
+/* ===============================
+   Variant: Grid (default) — GRID
+   =============================== */
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(160px, 1fr));
+  gap: 16px 3vw;                    /* row gap, column gap */
+  justify-items: center;
+  align-items: start;
+}
+
+/* Force last row of 3 (items 6–8) to be centered in cols 2–4 at 5-col layout */
+@media (min-width: 1201px) {
+  .skills-section:not(.skills--list) .skills-grid > .skill-card:nth-child(6) { grid-column: 2; }
+  .skills-section:not(.skills--list) .skills-grid > .skill-card:nth-child(7) { grid-column: 3; }
+  .skills-section:not(.skills--list) .skills-grid > .skill-card:nth-child(8) { grid-column: 4; }
+}
+
+/* Responsiveness (grid variant) */
+@media (max-width: 1200px) {
+  .skills-grid { grid-template-columns: repeat(4, minmax(160px, 1fr)); }
+  /* remove manual placement when not in 5-col mode (grid auto-flows) */
+}
+
+@media (max-width: 900px) {
+  .skills-grid { grid-template-columns: repeat(3, minmax(150px, 1fr)); }
+}
+
+@media (max-width: 640px) {
+  .skills-grid { grid-template-columns: repeat(2, minmax(140px, 1fr)); }
+}
+
+@media (max-width: 420px) {
+  .skills-grid {
+    grid-template-columns: 1fr;
+    justify-items: stretch;        /* full width cards on tiny screens */
+  }
+  .skill-card { padding: 10px 4px; }
+}
+
+/* ===============================
+   Variant: List (About Me)
+   =============================== */
+
+/* Add 'skills--list' on the section and 'skills-grid--list' on the grid in JSX */
+.skills--list h2 {
+  text-align: left;
+  margin-bottom: 12px;
+}
+
+/* In list mode, single-column layout */
+.skills-grid--list {
+  display: grid;                   /* override default grid if needed */
+  grid-template-columns: 1fr;
+  gap: 12px;
+  justify-items: start;
+}
+
+.skills--list .skill-card {
+  width: 100%;                     /* stretch in lists */
+  max-width: none;
+  padding: 8px 0;
+  justify-items: start;
+}
+
+.skills--list .skill-name { text-align: left; font-size: clamp(14px, 1.05rem, 18px); }
+.skills--list .skill-stars { justify-content: flex-start; }
+
+/* ===============================
+   Motion preferences
+   =============================== */
+@media (prefers-reduced-motion: reduce) {
+  .star {
+    transition: none !important;
+    animation: none !important;
+  }
+}

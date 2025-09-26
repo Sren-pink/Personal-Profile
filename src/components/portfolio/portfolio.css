@@ -1,0 +1,94 @@
+.pf-wrap { max-width: 1100px; 
+  margin: 0 auto; 
+  padding: 24px 16px; }
+
+.pf-h2 { 
+  font-family: Rubik, sans-serif;
+  font-weight: 800;
+  font-size: clamp(20px, 2.75vw, 36px);
+  line-height: 1.2;
+  margin: 0 0 16px 0;
+  color: var(--main-pink);
+}
+
+/* Filter bar */
+.pf-filter { 
+  display: flex; 
+  justify-content: center; 
+  flex-wrap: wrap; 
+  gap: 10px; 
+  margin: 12px 0 20px; 
+}
+.pf-chip {
+  font-family: "Nunito", sans-serif;
+  font-weight: 800;
+  font-size: clamp(14px, 1.4vw, 20px);
+  line-height: 1.1;
+  padding: 8px 12px;
+  border: 1px solid var(--chip-border);
+  background: var(--chip-bg); 
+  cursor: pointer;
+  color: var(--default-pink);
+}
+.pf-chip.is-active { background: var(--chip-active); border-color: var(--chip-active); color: var(--main-pink); }
+
+/* Grid: 3 / 2 / 1 per row */
+.pf-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(260px, 1fr));
+  gap: 18px;
+}
+@media (max-width: 1024px) { .pf-grid { grid-template-columns: repeat(2, minmax(220px, 1fr)); } }
+@media (max-width: 640px)  { .pf-grid { grid-template-columns: 1fr; } }
+
+/* Card */
+.pf-card {
+  border: 2px solid var(--card-border, #e6eaf0);
+  border-radius: 12px;
+  background: #fff;
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+
+.pf-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px rgba(0,0,0,.07);
+  /* no border-color change */
+}
+
+.pf-card-link { display: grid; gap: 10px; padding: 12px; text-decoration: none; color: inherit; }
+
+.pf-cover { aspect-ratio: 16/9; overflow: hidden; border-radius: 8px; background:#f6f9fc; }
+.pf-cover img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+.pf-meta { display: grid; gap: 6px; }
+
+.pf-title { font-weight: 800; font-family: "Nunito", system-ui, sans-serif; color: var(--accent);}
+
+.pf-sub {
+  color: var(--ink-subtle);
+  font-size: 14px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+/* accent only the year + category (from inline --accent) */
+.pf-sub .pf-year,
+.pf-sub .pf-category {
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.pf-tags { display: flex; gap: 8px; flex-wrap: wrap; }
+.pf-badge {
+  font-size: 12px; font-weight: 700; padding: 4px 8px; border-radius: 999px;
+  background: #EEF2F7; color: #22324F;
+}
+
+.pf-desc { margin: 4px 0 0; font-size: 14px; line-height: 1.35; }
+
+.pf-sub .pf-year,
+.pf-sub .pf-category,
+.pf-sub .pf-sep{
+  color: var(--accent);
+  font-weight: 700;
+}

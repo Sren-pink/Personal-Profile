@@ -1,0 +1,18 @@
+#root {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  background: var(--background);
+}
+
+:root {
+  --background: #FEFEFE;
+  --nav-pink: #F5C9D4;
+  --nav-text: #ffffff;
+  --nav-hover: #F2A2BD;
+  --default-blue: #b9cae0;
+  --light-star: #dddddd;
+  --main-blue: #97c1eb;
+  --default-pink: #F5C9D4;
+  --main-pink: #F2A2BD;
+}

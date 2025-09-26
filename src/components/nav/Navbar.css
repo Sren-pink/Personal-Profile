@@ -1,0 +1,79 @@
+/* NAV CONTAINER */
+.nav {
+  width: 100%;
+  height: 7vw;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-self: center;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--nav-pink);
+}
+
+#homeicon {
+  display: inline-block;         
+  padding-left: 3vw;
+
+  list-style: none;
+
+  font-family: rubik;
+  font-style: normal;
+  font-weight: bold;
+
+  font-size: 2.5vw;
+  color: var(--nav-text);
+
+  text-align: center;
+  text-decoration: none;
+
+  transition: transform 0.5s ease, color 0.5s ease-in-out;
+}
+
+/* RIGHT-SIDE NAV LINKS WRAPPER */
+.navbar {
+  padding-right: 2vw;
+  margin: 0;
+  width: max-content;
+  height: 5vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  list-style: none;
+}
+
+/* NAV BUTTON LINKS */
+.navbutton {
+  display: flex;   
+  flex-direction: row;
+  padding: 0 2vw;
+
+  list-style: none;
+
+  font-family: rubik;
+  font-style: normal;
+  font-weight: bold;
+
+  font-size: 2.5vw;
+  color: var(--nav-text);
+
+  text-align: center;
+  text-decoration: none;
+
+  transition: transform 0.5s ease, color 0.5s ease-in-out;
+}
+
+/* HOVER SCALE */
+.navbutton:hover,
+#homeicon:hover {
+  transform: scale(1.025);
+  color: var(--nav-hover);
+}
+
+/* ACTIVE (CURRENT PAGE) STATE */
+.navbutton.active,
+#homeicon.active {
+  transform: scale(1.05);                          
+  color: var(--nav-hover);
+  transition: transform 0.3s ease, color 0.3s ease;
+}
